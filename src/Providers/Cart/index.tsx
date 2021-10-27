@@ -28,7 +28,8 @@ export const CartProvider = ({ children }: CartProps) => {
 	}
 
 	const deleteCart = (product: Product) => {
-		const newCart = cart.filter((item) => item.title !== product.title)
+		const newCart = cart.filter((item) => item.id !== product.id)
+		console.log(newCart)
 		setCart(newCart)
 	}
 
